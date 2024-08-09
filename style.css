@@ -1,0 +1,96 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Parte 2: Estilos para la Barra superior de búsqueda */
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ajusta el espacio entre elementos */
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    z-index: 1000;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.youtube-logo {
+    height: 24px; /* Ajusta el tamaño del logo */
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 600px; /* Limita el tamaño máximo de la barra de búsqueda */
+    margin: 0 auto; /* Centra el contenedor de búsqueda */
+}
+
+.search-container input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 2px 0 0 2px;
+    outline: none;
+}
+
+.search-container button {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-left: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    border-radius: 0 2px 2px 0;
+}
+
+/* Parte 1: Estilos para la Barra lateral izquierda */
+.sidebar {
+    width: 240px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    height: 100vh;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 56px;
+    left: 0;
+    z-index: 500;
+    overflow-y: auto;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.sidebar ul li:hover {
+    background-color: #e0e0e0;
+}
+
+
+/* Asegurarse de que el contenido principal comience después de la barra de búsqueda y la barra lateral */
+.main-content {
+    margin-left: 240px;
+    padding-top: 56px;
+    padding: 20px;
+}
